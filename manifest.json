@@ -1,7 +1,7 @@
 {
   "name": "Copenhagen",
   "author": "Zendesk",
-  "version": "3.3.0",
+  "version": "3.3.1",
   "api_version": 3,
   "default_locale": "en-us",
   "settings": [
@@ -298,7 +298,49 @@
           "type": "checkbox",
           "description": "recent_activity_description",
           "label": "recent_activity_label",
-          "value": true
+          "value": "Article1"
+        },
+        {
+          "identifier": "articleOne",
+          "type": "text",
+          "description": "text_articleOne_description",
+          "label": "text_articleOne_label",
+          "value": "Article1"
+        },
+        {
+          "identifier": "articleOneUrl",
+          "type": "text",
+          "description": "url_articleOne_description",
+          "label": "url_articleOne_label",
+          "value": ""
+        },
+        {
+          "identifier": "articleTwo",
+          "type": "text",
+          "description": "text_articleTWo_description",
+          "label": "text_articleTWo_label",
+          "value": "Article2"
+        },
+        {
+          "identifier": "articleTwoUrl",
+          "type": "text",
+          "description": "url_articleTWo_description",
+          "label": "url_articleTWo_label",
+          "value": ""
+        },
+        {
+          "identifier": "articleThree",
+          "type": "text",
+          "description": "text_articleThree_description",
+          "label": "text_articleTWo_label",
+          "value": "Article3"
+        },
+        {
+          "identifier": "articleThreeUrl",
+          "type": "text",
+          "description": "url_articleThree_description",
+          "label": "urlarticleTWo_label",
+          "value": ""
         }
       ]
     },

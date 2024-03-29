@@ -15,9 +15,10 @@
   <div class="nav-wrapper-desktop">
     <nav class="user-nav" id="user-nav" aria-label="{{t 'user_navigation'}}">
       <ul class="user-nav-list">
-        
+        {{#if signed_in}}
+        <li>{{#link 'requests' class='submit-a-request'}}Requests{{/link}}</li>
+        {{/if}}
         {{#unless signed_in}}
-        <li>{{#link 'requests' class='submit-a-request'}}Submit a request{{/link}}</li>
         <li>{{link 'new_request' class='submit-a-request'}}</li>
           <li>
             {{#link "sign_in" class="sign-in"}}
