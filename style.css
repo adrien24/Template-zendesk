@@ -10,6 +10,14 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "MontserratRegular";
+  src: url("$assets-montserratalternates-regular-ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
