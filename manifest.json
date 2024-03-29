@@ -1,7 +1,7 @@
 {
   "name": "Copenhagen",
   "author": "Zendesk",
-  "version": "3.3.3",
+  "version": "3.3.4",
   "api_version": 3,
   "default_locale": "en-us",
   "settings": [
@@ -301,45 +301,45 @@
           "value": true
         },
         {
-          "identifier": "articleOne",
+          "identifier": "article_one",
           "type": "text",
-          "description": "text_articleOne_description",
-          "label": "text_articleOne_label",
+          "description": "text_article_one_description",
+          "label": "text_article_one_label",
           "value": "Article1"
         },
         {
-          "identifier": "articleOneUrl",
+          "identifier": "article_one_url",
           "type": "text",
-          "description": "url_articleOne_description",
-          "label": "url_articleOne_label",
+          "description": "url_article_one_description",
+          "label": "url_article_one_label",
           "value": "#"
         },
         {
-          "identifier": "articleTwo",
+          "identifier": "article_two",
           "type": "text",
-          "description": "text_articleTWo_description",
-          "label": "text_articleTWo_label",
+          "description": "text_article_two_description",
+          "label": "text_article_two_label",
           "value": "Article2"
         },
         {
-          "identifier": "articleTwoUrl",
+          "identifier": "article_two_url",
           "type": "text",
-          "description": "url_articleTWo_description",
-          "label": "url_articleTWo_label",
+          "description": "url_article_two_description",
+          "label": "url_article_two_label",
           "value": "#"
         },
         {
-          "identifier": "articleThree",
+          "identifier": "article_three",
           "type": "text",
-          "description": "text_articleThree_description",
-          "label": "text_articleTWo_label",
+          "description": "text_article_three_description",
+          "label": "text_article_three_label",
           "value": "Article3"
         },
         {
-          "identifier": "articleThreeUrl",
+          "identifier": "article_three_url",
           "type": "text",
-          "description": "url_articleThree_description",
-          "label": "urlarticleTWo_label",
+          "description": "url_article_three_description",
+          "label": "url_article_three_label",
           "value": "#"
         }
       ]
