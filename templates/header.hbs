@@ -18,6 +18,7 @@
         
         {{#unless signed_in}}
         <li>{{#link 'requests' class='submit-a-request'}}Submit a request{{/link}}</li>
+        <li>{{link 'new_request' class='submit-a-request'}}</li>
           <li>
             {{#link "sign_in" class="sign-in"}}
               {{t 'sign_in'}}
