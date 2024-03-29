@@ -3,7 +3,7 @@
   "author": "Zendesk",
   "version": "3.2.9",
   "api_version": 3,
-  "default_locale": "en - us",
+  "default_locale": "en-us",
   "settings": [
     {
       "label": "colors_group_label",
