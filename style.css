@@ -4,7 +4,7 @@
 
 font-face {
   font-family: "MontserratBold";
-  src: url("$assets-MontserratAlternates-Bold-ttf") format("truetype");
+  src: url("$assets-montserratalternates-bold-ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -12,7 +12,7 @@ font-face {
 
 font-face {
   font-family: "MontserratRegular";
-  src: url("settings/MontserratAlternates-Regular.ttf") format("truetype");
+  src: url("$assets-montserratalternates-regular-ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
