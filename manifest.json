@@ -9,6 +9,13 @@
       "label": "colors_group_label",
       "variables": [
         {
+          "identifier": "background_color_sand",
+          "type": "color",
+          "description": "background_color_sand_description",
+          "label": "background_color_sand_label",
+          "value": "#F7EDE8"
+        },
+        {
           "identifier": "brand_color",
           "type": "color",
           "description": "brand_color_description",
@@ -67,11 +74,11 @@
           "type": "list",
           "description": "heading_font_description",
           "label": "heading_font_label",
-          "value": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif",
+          "value": "MontserratBold",
           "options": [
             {
               "label": "System",
-              "value": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+              "value": "MontserratBold"
             },
             {
               "label": "Arial",
