@@ -16,7 +16,7 @@
     <nav class="user-nav" id="user-nav" aria-label="{{t 'user_navigation'}}">
       <ul class="user-nav-list">
         {{#if signed_in}}
-        <li>{{#link 'requests' class='submit-a-request'}}Requests{{/link}}</li>
+        <li>{{link 'requests' class='submit-a-request'}}</li>
         {{/if}}
         {{#unless signed_in}}
         <li>{{link 'new_request' class='submit-a-request'}}</li>

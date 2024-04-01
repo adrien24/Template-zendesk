@@ -16,6 +16,13 @@
           "value": "#F7EDE8"
         },
         {
+          "identifier": "background_color_white",
+          "type": "color",
+          "description": "background_color_white_description",
+          "label": "background_color_white_label",
+          "value": "#FFFFFF"
+        },
+        {
           "identifier": "brand_color",
           "type": "color",
           "description": "brand_color_description",
@@ -340,6 +347,39 @@
           "type": "text",
           "description": "url_article_three_description",
           "label": "url_article_three_label",
+          "value": "#"
+        }
+      ]
+    },
+    {
+      "label": "custom_bloc_group_label",
+      "variables": [
+        {
+          "identifier": "color_background_custom_bloc",
+          "type": "color",
+          "description": "color_background_custom_bloc_description",
+          "label": "color_background_custom_bloc_label",
+          "value": "#F7EDE8"
+        },
+        {
+          "identifier": "custom_bloc",
+          "type": "text",
+          "description": "custom_bloc_description",
+          "label": "custom_bloc_label",
+          "value": "Personalisable text"
+        },
+        {
+          "identifier": "custom_bloc_button",
+          "type": "text",
+          "description": "custom_bloc_buttondescription",
+          "label": "custom_bloc_button_label",
+          "value": "Submit a request"
+        },
+        {
+          "identifier": "custom_bloc_url",
+          "type": "text",
+          "description": "url_custom_bloc_description",
+          "label": "url_custom_bloc_label",
           "value": "#"
         }
       ]

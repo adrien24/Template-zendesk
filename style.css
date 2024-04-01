@@ -250,7 +250,7 @@ h1 {
 h2.title {
   font-size: 76px;
   line-height: normal;
-  margin: 25px 0;
+  margin: 25px 0 50px;
 }
 
 h2 span {
@@ -334,14 +334,28 @@ textarea:focus {
 }
 
 .container {
-  max-width: 1160px;
-  margin: 0 auto;
-  padding: 0 5%;
+  padding: 0 10%;
+  width: 100%;
 }
-@media (min-width: 1160px) {
+
+body > main > div:nth-child(4) {
+  background-color: $background_color_white;
+  position: relative;
+}
+
+.line {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: -5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media (min-width: 1500px) {
   .container {
-    padding: 0;
-    width: 90%;
+    padding: 0 18%;
+    width: 100%;
   }
 }
 
@@ -1360,13 +1374,13 @@ input[type="submit"][disabled] {
 
 .search-icon {
   position: relative;
-  top: 90%;
+  top: 80%;
   transform: translateY(-50%);
   position: absolute;
   left: 15px;
   z-index: 1;
-  width: 18px;
-  height: 18px;
+  width: 20px;
+  height: 20px;
   color: #777;
   pointer-events: none;
 }
@@ -1381,7 +1395,7 @@ input[type="submit"][disabled] {
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  height: 300px;
+  height: 400px;
   padding: 0 20px;
   text-align: center;
   width: 100%;
@@ -1392,6 +1406,24 @@ input[type="submit"][disabled] {
   transform: translateY(-50%);
   max-width: 610px;
   margin: 0 auto;
+}
+
+.custom-articles {
+  display: flex;
+  margin-top: 13px;
+  align-items: center;
+}
+
+.custom-articles span {
+  font-family: $heading_font;
+}
+
+.custom-articles a {
+  color: $brand_color;
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0 10px 0 40px;
+  text-decoration: none;
 }
 
 .page-header {
@@ -1486,32 +1518,33 @@ input[type="submit"][disabled] {
   }
 }
 .blocks-item {
-  border: 1px solid $brand_color;
-  border-radius: 4px;
+  border: 2px solid $brand_color;
+  border-radius: 8px;
   box-sizing: border-box;
   color: $brand_color;
   display: flex;
-  flex: 1 0 340px;
+  flex: 1 0 300px;
   margin: 0 0 30px;
   max-width: 100%;
   text-align: center;
+  background-color: $background_color_white;
 }
 @media (min-width: 768px) {
   .blocks-item {
     margin: 0 15px 30px;
   }
 }
-.blocks-item:hover,
+/* .blocks-item:hover,
 .blocks-item:focus,
 .blocks-item:active {
   background-color: $brand_color;
-}
-.blocks-item:hover *,
+} */
+/* .blocks-item:hover *,
 .blocks-item:focus *,
 .blocks-item:active * {
   color: $brand_text_color;
   text-decoration: none;
-}
+} */
 .blocks-item-internal {
   background-color: transparent;
   border: 1px solid #ddd;
@@ -1527,12 +1560,17 @@ input[type="submit"][disabled] {
 }
 .blocks-item-link {
   color: $brand_color;
-  padding: 20px 30px;
+  padding: 20px 20px 40px 20px;
   display: flex;
   flex-direction: column;
   flex: 1;
   justify-content: center;
   border-radius: inherit;
+}
+
+.blocks-item-link .icon-category {
+  width: 78px;
+  margin: 20px auto;
 }
 .blocks-item-link:visited,
 .blocks-item-link:hover,
@@ -1572,48 +1610,72 @@ input[type="submit"][disabled] {
 }
 
 /***** Promoted articles *****/
-.promoted-articles {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-}
-@media (min-width: 1024px) {
-  .promoted-articles {
-    flex-direction: row;
-  }
-}
-.promoted-articles-item {
-  flex: 1 0 auto;
-}
-@media (min-width: 1024px) {
-  .promoted-articles-item {
-    align-self: flex-end;
-    flex: 0 0 auto;
-    padding-right: 30px;
-    width: 33%; /* Three columns on desktop */
-  }
-  [dir="rtl"] .promoted-articles-item {
-    padding: 0 0 0 30px;
-  }
-}
-.promoted-articles-item:nth-child(3n) {
-  padding-right: 0;
-}
-.promoted-articles-item a {
-  display: block;
-  border-bottom: 1px solid #ddd;
-  padding: 15px 0;
-}
-.promoted-articles-item .icon-lock {
-  vertical-align: baseline;
-}
-.promoted-articles-item:last-child a {
+.articles_home {
+  padding-top: 150px;
   border: 0;
 }
-@media (min-width: 1024px) {
-  .promoted-articles-item:last-child a {
-    border-bottom: 1px solid #ddd;
+
+.title_articles_home {
+  display: flex;
+}
+
+.title_articles_home h2 {
+  margin: auto;
+  font-size: 50px;
+  transform: translateX(-52.5px);
+}
+
+.title_articles_home img {
+  margin-top: -10%;
+}
+
+.article-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: relative;
+  list-style-type: none; /* Pour enlever les puces */
+  padding: 0; /* Pour enlever le padding par défaut */
+  margin: 75px 0;
+}
+
+@media (max-width: 900px) {
+  .article-list a {
+    width: 100% !important;
   }
+  .article-list::before {
+    display: none;
+  }
+}
+
+.article-list::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  bottom: 0;
+  width: 2px; /* Épaisseur de la ligne */
+  background-color: transparent; /* On enlève la couleur de fond */
+  border-left: 1px dashed #e3e3e3; /* Ligne en pointillé */
+  z-index: 1;
+}
+
+.article-list > a {
+  width: 45%; /* Ajustez selon la largeur désirée pour les articles */
+  margin-bottom: 1em; /* Espacement en bas de chaque article */
+  z-index: 2; /* S'assurer que les articles sont au-dessus de la ligne */
+  background: #fff; /* Un fond pour cacher la ligne à travers le texte, si nécessaire */
+  border: 2px solid #d7d6d637; /* Une bordure autour de chaque article */
+  border-radius: 12px;
+  padding: 20px;
+  color: #000;
+}
+
+.promoted-articles-item {
+  display: block; /* Pour que le lien remplisse le conteneur de l'article */
+  text-decoration: none; /* Optionnel, pour enlever le soulignement des liens */
+  color: inherit; /* Pour que les liens prennent la couleur du texte normal */
 }
 
 /***** Community section in homepage *****/
@@ -5033,4 +5095,47 @@ html[dir="rtl"] .notification-left-aligned {
 /***** Upload Dropzone *****/
 .upload-dropzone {
   border: 1px solid #87929d;
+}
+
+/* Custom theme */
+
+/* Personalisable bloc */
+
+.personalisable_bloc {
+  background-color: $color_background_custom_bloc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  padding: 25px 20px 20px;
+  position: relative;
+}
+
+.personalisable_bloc span {
+  font-size: 76px;
+  font-family: $heading_font;
+  line-height: 0.8;
+  color: #cd4631;
+}
+
+.personalisable_bloc h2 {
+  font-size: 30px;
+  font-family: $heading_font;
+  margin: 0;
+  padding-bottom: 35px;
+}
+
+.personalisable_bloc a {
+  display: inline-block;
+  font-size: 14px;
+  font-family: MontserratBold;
+  margin: 0 20px;
+  padding: 12px 24px 12px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  border: 2px solid #2f3941;
+  background-color: #000000;
+  color: #ffffff;
+  box-shadow: rgb(0, 0, 0, 0.25) 3px 3px;
 }
