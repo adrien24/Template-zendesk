@@ -1,7 +1,7 @@
 {
   "name": "Copenhagen",
   "author": "Zendesk",
-  "version": "3.3.5",
+  "version": "3.3.6",
   "api_version": 3,
   "default_locale": "en-us",
   "settings": [
@@ -366,7 +366,7 @@
           "type": "text",
           "description": "custom_bloc_description",
           "label": "custom_bloc_label",
-          "value": "Personalisable text"
+          "value": "un texte personnaliser pour cette catégorie personnalisable"
         },
         {
           "identifier": "custom_bloc_button",
