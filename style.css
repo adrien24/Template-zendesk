@@ -5122,6 +5122,7 @@ html[dir="rtl"] .notification-left-aligned {
 .personalisable_bloc h2 {
   font-size: 30px;
   font-family: $heading_font;
+  width: 72%;
   margin: 0;
   padding-bottom: 35px;
   text-align: center;
@@ -5139,4 +5140,22 @@ html[dir="rtl"] .notification-left-aligned {
   background-color: #000000;
   color: #ffffff;
   box-shadow: rgb(0, 0, 0, 0.25) 3px 3px;
+}
+
+.personalisable_bloc .star {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(50%, -35%);
+  font-size: 30px;
+  color: #cd4631;
+}
+
+.personalisable_bloc .vector {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translate(-50%, -20%);
+  font-size: 30px;
+  color: #cd4631;
 }

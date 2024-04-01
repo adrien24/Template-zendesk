@@ -355,6 +355,13 @@
       "label": "custom_bloc_group_label",
       "variables": [
         {
+          "identifier": "show_custom_bloc",
+          "type": "checkbox",
+          "description": "show_custom_bloc_description",
+          "label": "show_custom_bloc_label",
+          "value": true
+        },
+        {
           "identifier": "color_background_custom_bloc",
           "type": "color",
           "description": "color_background_custom_bloc_description",

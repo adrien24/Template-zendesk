@@ -84,12 +84,15 @@
       </section>
     {{/if}}
   </section>
-
+ {{#if settings.show_custom_bloc}}
   <section class="personalisable_bloc">
+    <img src="{{asset 'star.svg'}}" alt="" class="star">
+    <img src="{{asset 'vector.svg'}}" alt="" class="vector">
     <span>“</span>
     <h2>{{settings.custom_bloc}}</h2>
     <a href="{{settings.custom_bloc_url}}">{{settings.custom_bloc_button}}</a>
   </section>
+  {{/if}}
 
   {{#if help_center.community_enabled}}
     <section class="section home-section community">
