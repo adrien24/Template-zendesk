@@ -1,7 +1,7 @@
 {
   "name": "Copenhagen",
   "author": "Zendesk",
-  "version": "3.3.7",
+  "version": "3.3.8",
   "api_version": 3,
   "default_locale": "en-us",
   "settings": [
@@ -21,6 +21,13 @@
           "description": "background_color_white_description",
           "label": "background_color_white_label",
           "value": "#FFFFFF"
+        },
+        {
+          "identifier": "background_color_blue",
+          "type": "color",
+          "description": "background_color_blue_description",
+          "label": "background_color_blue_label",
+          "value": "#EDF3F7"
         },
         {
           "identifier": "brand_color",

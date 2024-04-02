@@ -12,7 +12,7 @@
     </div>
 </section>
 
-<div class="container">
+<div class="container category">
   <section class="section knowledge-base">
     <h2 class="visibility-hidden">{{ t 'categories' }}</h2>
     <section class="categories blocks">
@@ -54,10 +54,11 @@
     </section>
 </div>
 <div class="container">
-    <div class="line">
+   
+    {{#if promoted_articles}}
+     <div class="line">
       <img src='{{asset 'line.svg'}}' class="home-image"/>
     </div>
-    {{#if promoted_articles}}
       <section class="articles articles_home">
         <div class="title_articles_home">
           <img src='{{asset 'sparkle.svg'}}' class="icon-star"/>
@@ -94,20 +95,37 @@
   </section>
   {{/if}}
 
-  {{#if help_center.community_enabled}}
+ 
+</div>
+
+<div class="container">
+   {{#if help_center.community_enabled}}
+    <div class="line">
+      <img src='{{asset 'line2.svg'}}' class="home-image"/>
+    </div>
     <section class="section home-section community">
-      <h2>{{t 'community'}}</h2>
+       <div class="title_articles_home">
+          <img src='{{asset 'sparkle.svg'}}' class="icon-star"/>
+        <h2>{{t 'community'}}</h2>
+        </div>
+      <script>
+          window.addEventListener("DOMContentLoaded", () => {
+            console.log('oui')
+            const communityImage = document.querySelector(".recent-activity");
+            if (communityImage) {
+              const img = document.createElement("img");
+              console.log
+              img.src = "{{asset 'community.svg'}}"; // Remplacez par l'URL de votre image
+              communityImage.appendChild(img);
+            }
+          })
+    </script>
       {{#link 'community' class='community-link'}}
         {{t 'join_conversation'}}
       {{/link}}
 
-      <div class="community-image"></div>
+     {{recent_activity scope='community'}}
+      
     </section>
   {{/if}}
-
-  <section class="section home-section activity">
-    {{#if settings.show_recent_activity}}
-      {{recent_activity}}
-    {{/if}}
-  </section>
 </div>
