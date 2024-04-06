@@ -1745,11 +1745,15 @@ input[type="submit"][disabled] {
 
 /***** Homepage *****/
 .section {
-  padding-bottom: 18%;
+  padding-bottom: 40px;
 
   @media (max-width: 768px) {
     padding-bottom: 0;
   }
+}
+
+.section_category {
+  padding-bottom: 18%;
 }
 
 .home-section h2 {
