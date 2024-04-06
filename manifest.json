@@ -1,7 +1,7 @@
 {
   "name": "Copenhagen",
   "author": "Zendesk",
-  "version": "3.3.9",
+  "version": "3.4.0",
   "api_version": 3,
   "default_locale": "en-us",
   "settings": [
@@ -83,6 +83,20 @@
     {
       "label": "fonts_group_label",
       "variables": [
+        {
+          "identifier": "text_font_inter",
+          "type": "text",
+          "description": "text_font_inter_description",
+          "label": "text_font_inter_label",
+          "value": "InterRegular"
+        },
+        {
+          "identifier": "text_font_instrument",
+          "type": "text",
+          "description": "text_font_instrumentregular_description",
+          "label": "text_font_instrumentregular_label",
+          "value": "InstrumentRegular"
+        },
         {
           "identifier": "heading_font",
           "type": "list",
@@ -234,6 +248,13 @@
     {
       "label": "brand_group_label",
       "variables": [
+        {
+          "identifier": "brand_name",
+          "type": "text",
+          "description": "brand_name_description",
+          "label": "brand_name_label",
+          "value": "Brand name"
+        },
         {
           "identifier": "logo",
           "type": "file",

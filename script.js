@@ -659,7 +659,27 @@
     ) {
       notificationElm.previousElementSibling.focus();
     }
+    const link = document.querySelector(".link");
 
-    
+    link.addEventListener("click", () => {
+      copy();
+    });
+
+    function copy() {
+      // Get the text field
+
+      // put in variable the url of the page
+      var copyText = window.location.href;
+
+      // copy in the clipboard copyText
+      navigator.clipboard.writeText(copyText).then(
+        function () {
+          console.log("Async: Copying to clipboard was successful!");
+        },
+        function (err) {
+          console.error("Async: Could not copy text: ", err);
+        }
+      );
+    }
   });
 })();
