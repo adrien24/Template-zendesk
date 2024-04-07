@@ -1396,7 +1396,7 @@ input[type="submit"][disabled] {
   background-color: #fff;
   border-radius: 30px;
   border: none;
-  font-family: $text_font_inter;
+  font-family: "InterRegular", sans-serif;
 }
 .search-full input[type="search"],
 .search-full .clear-button {
@@ -1655,7 +1655,7 @@ input[type="submit"][disabled] {
   background-color: $background_color_white;
   border-radius: 50px;
   font-size: 12px;
-  font-family: $text_font_inter, sans-serif;
+  font-family: "InterRegular", sans-serif;
   box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.2);
   cursor: pointer;
 }
@@ -1663,7 +1663,7 @@ input[type="submit"][disabled] {
 .search-container h2 {
   margin: 25px 0;
   font-size: 35px;
-  font-family: $text_font_instrument, sans-serif;
+  font-family: "InstrumentRegular", sans-serif;
 }
 
 .search-container h2 > span {
