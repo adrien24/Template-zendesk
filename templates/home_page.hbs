@@ -3,7 +3,7 @@
 <section id="main-content" class="section hero">
   <div class="hero-inner">
     <h2 class="title">Need help ?<br/><span>We are here.</span></h2>
-   <svg width="40" height="40" class="search-icon" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+   <svg width="40" height="40" class="search-icon search-icon-custom" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M17.5 4.1665H18.3333C18.3333 3.70627 17.9602 3.33317 17.5 3.33317V4.1665ZM17.5 15.8332V16.6665C17.9602 16.6665 18.3333 16.2934 18.3333 15.8332H17.5ZM2.5 15.8332H1.66667C1.66667 16.2934 2.03976 16.6665 2.5 16.6665V15.8332ZM2.5 4.1665V3.33317C2.03976 3.33317 1.66667 3.70627 1.66667 4.1665H2.5ZM10 10.8332L9.4723 11.4781C9.77927 11.7293 10.2207 11.7293 10.5277 11.4781L10 10.8332ZM16.6667 4.1665V15.8332H18.3333V4.1665H16.6667ZM17.5 14.9998H2.5V16.6665H17.5V14.9998ZM3.33333 15.8332V4.1665H1.66667V15.8332H3.33333ZM2.5 4.99984H17.5V3.33317H2.5V4.99984ZM16.9723 4.05185L9.4723 10.1882L10.5277 11.4781L18.0277 5.34177L16.9723 4.05185ZM10.5277 10.1882L3.0277 4.05185L1.9723 5.34177L9.4723 11.4781L10.5277 10.1882Z" fill="#8F8F8F"/>
     </svg>
     {{search submit=true instant=settings.instant_search  class='search search-full search-home' placeholder="Type your question here"}}
@@ -54,7 +54,6 @@
     </section>
 </div>
 <div class="container">
-   
     {{#if promoted_articles}}
      <div class="line">
       <img src='{{asset 'line.svg'}}' class="home-image"/>
@@ -64,7 +63,7 @@
           <img src='{{asset 'sparkle.svg'}}' class="icon-star"/>
         <h2>{{t 'promoted_articles'}}</h2>
         </div>
-        <ul class="article-list promoted-articles">
+        <ul class="article-list promoted-articles promoted-articles-before">
           {{#each promoted_articles}}
           <a href="{{url}}">
             <li class="promoted-articles-item">
@@ -86,6 +85,7 @@
     {{/if}}
   </section>
  {{#if settings.show_custom_bloc}}
+ <div class="container-divider-white"></div>
   <section class="personalisable_bloc">
     <img src="{{asset 'star.svg'}}" alt="" class="star">
     <img src="{{asset 'vector.svg'}}" alt="" class="vector">
@@ -93,6 +93,7 @@
     <h2>{{settings.custom_bloc}}</h2>
     <a href="{{settings.custom_bloc_url}}">{{settings.custom_bloc_button}}</a>
   </section>
+  <div class="container-divider-white"></div>
   {{/if}}
 
  

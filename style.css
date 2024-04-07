@@ -107,6 +107,7 @@ body {
 
 main {
   display: block;
+  background-color: white;
 }
 
 h1 {
@@ -1336,6 +1337,9 @@ input[type="submit"][disabled] {
   margin: 0 0 15px 0;
   padding: 0;
   display: flex;
+  color: #282c25;
+  font-family: "MontserratRegular", sans-serif !important;
+  padding: 35px 0;
 }
 @media (min-width: 768px) {
   .breadcrumbs {
@@ -1372,11 +1376,15 @@ input[type="submit"][disabled] {
 .search-home input[type="search"] {
   border-radius: 10px !important;
 
-  border: 1px solid transparent;
+  border: 1px solid transparent !important;
 
   @media (min-width: 768px) {
     margin-right: 10px;
   }
+}
+
+.search_nav input[type="search"] {
+  border: 1px solid transparent !important;
 }
 
 .search-home input[type="search"] {
@@ -1403,6 +1411,7 @@ input[type="submit"][disabled] {
   width: 100%;
   padding: 15px;
   border-radius: 10px;
+  border: #000 1px solid;
 }
 .search input[type="search"]:focus {
   color: #555;
@@ -1482,9 +1491,26 @@ input[type="submit"][disabled] {
   border-right-color: $brand_color;
 }
 
+.search-icon-custom {
+  position: relative;
+  top: 80% !important;
+  transform: translateY(-50%);
+  position: absolute;
+  left: 15px;
+  z-index: 1;
+  width: 20px;
+  height: 20px;
+  color: #777;
+  pointer-events: none;
+
+  @media (max-width: 768px) {
+    top: 88% !important;
+  }
+}
+
 .search-icon {
   position: relative;
-  top: 80%;
+  top: 53%;
   transform: translateY(-50%);
   position: absolute;
   left: 15px;
@@ -1500,7 +1526,7 @@ input[type="submit"][disabled] {
 }
 
 .other_page {
-  top: 89.5%;
+  top: 89.5% !important;
 }
 
 [dir="rtl"] .search-icon {
@@ -1562,7 +1588,7 @@ input[type="submit"][disabled] {
 }
 @media (min-width: 768px) {
   .page-header {
-    align-items: baseline;
+    align-items: center;
     flex-direction: row;
     flex-wrap: nowrap;
     gap: 16px;
@@ -1581,6 +1607,7 @@ input[type="submit"][disabled] {
 .page-header h1 {
   flex-grow: 1;
   margin-bottom: 10px;
+  margin: auto;
 }
 .page-header-description {
   font-style: italic;
@@ -1663,7 +1690,7 @@ input[type="submit"][disabled] {
 }
 @media (min-width: 768px) {
   .blocks-list {
-    margin: 0 -15px;
+    margin: 0 9%;
   }
 }
 .blocks-item {
@@ -1752,6 +1779,10 @@ input[type="submit"][disabled] {
   }
 }
 
+.hero {
+  background-color: $background_color_sand;
+}
+
 .section_category {
   padding-bottom: 18%;
 }
@@ -1799,18 +1830,46 @@ input[type="submit"][disabled] {
   list-style-type: none; /* Pour enlever les puces */
   padding: 0; /* Pour enlever le padding par défaut */
   margin: 15px 0;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.article-list-sectionPage li {
+  width: 45%;
+  padding: 20px;
+  min-width: 300px;
+  flex-wrap: wrap;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+
+  .link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    img {
+      width: 20px;
+      height: 20px;
+    }
+  }
 }
 
 @media (max-width: 900px) {
   .article-list a {
     width: 100% !important;
   }
-  .promoted-articles::before {
+  .promoted-articles-before::before {
     display: none;
   }
 }
 
-.promoted-articles::before {
+.promoted-articles-before::before {
   content: "";
   position: absolute;
   left: 50%;
@@ -2028,8 +2087,12 @@ input[type="submit"][disabled] {
 }
 
 .category {
-  margin: 7% 0;
+  padding: 7% 0;
   background-color: $background_color_sand;
+
+  section {
+    padding: 0 5%;
+  }
 }
 
 .section-tree {
@@ -2072,7 +2135,8 @@ input[type="submit"][disabled] {
   }
 }
 
-.section:nth-child(1n) {
+.section:nth-child(1n),
+.page-header {
   .icon_section {
     background-image: url($assets-sectionone-png);
     width: 50px;
@@ -2131,6 +2195,10 @@ input[type="submit"][disabled] {
 .section-container {
   display: flex;
   justify-content: flex-end;
+  font-family: "interRegular", sans-serif;
+  h1 {
+    font-family: "interRegular", sans-serif;
+  }
 }
 .section-content {
   flex: 1;
@@ -2138,7 +2206,7 @@ input[type="submit"][disabled] {
 }
 @media (min-width: 1024px) {
   .section-content {
-    flex: 0 0 80%;
+    flex: 0 0 100%;
   }
 }
 .section-list {
@@ -2977,6 +3045,7 @@ input[type="submit"][disabled] {
 .community-hero {
   background-image: url($community_background_image);
   margin-bottom: 10px;
+  background-size: auto;
 }
 .community-footer {
   padding-top: 50px;
