@@ -660,10 +660,11 @@
       notificationElm.previousElementSibling.focus();
     }
     const link = document.querySelector(".link");
-
-    link.addEventListener("click", () => {
-      copy();
-    });
+    if (link) {
+      link.addEventListener("click", () => {
+        copy();
+      });
+    }
 
     function copy() {
       // Get the text field
