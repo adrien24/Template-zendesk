@@ -1,9 +1,9 @@
 {
   "name": "Waywar",
-  "author": "Zendesk",
-  "version": "3.5.0",
+  "author": "Impli",
+  "version": "3.5.1",
   "api_version": 3,
-  "default_locale": "en-us",
+  "default_locale": "fr",
   "settings": [
     {
       "label": "colors_group_label",
